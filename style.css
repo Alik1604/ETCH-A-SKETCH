@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#grid-container{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-wrap: wrap;
+ max-width: 290px;
+ background-color: dimgray;
+ 
+}
+.div_grid{
+    width: 16px;
+    height: 16px;
+    background-color: aqua;
+    margin: 1px;
+}
