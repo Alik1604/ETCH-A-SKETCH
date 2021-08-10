@@ -2,6 +2,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 #grid-container{
  display: flex;
@@ -9,6 +10,7 @@ body{
  justify-content: center;
  flex-wrap: wrap;
  max-width: 290px;
+ max-height: 290px;
  background-color: dimgray;
  
 }
