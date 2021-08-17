@@ -19,8 +19,10 @@ body{
 #button-cont{
     margin-bottom: 1%;
     display: flex;
+    
 }
 
 .top-button{
     margin: 10px;
 }
+

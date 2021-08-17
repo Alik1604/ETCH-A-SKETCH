@@ -12,41 +12,32 @@ for (let i = 0; i < numberOfDivs; i++){
 }
 
 
-
-
-const buttonGray = document.querySelector('#gray-mod');
-
 const topButtons = document.querySelectorAll('.top-button');
 let switcher = '';
 let color = '';
 topButtons.forEach(button => button.addEventListener('click', () => switcher = button.id))
-topButtons.forEach(button => button.addEventListener('click', changeColor))
-function changeColor(){
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click',clearColor)
+function setColor (element){
    switch (switcher){
-      case "clear":
-         const buttonClear = document.querySelector('#clear');
-         buttonClear.addEventListener('click', clearColor)
-         console.log(switcher)
-      break;
       case "random-color":
-         const buttonRandom = document.querySelector('#random-color');
-         color = 'red';
-         console.log(switcher)
+         element.currentTarget.style.filter = 'brightness(100%)';
+         const max = 9;
+         const min = 0;
+         let colors =['pink','green','gray','yellow','red','blue','aqua','brown','blueviolet','khaki'];
+         ComputerChoise = Math.floor(Math.random() * (max - min) ) + min;
+         element.currentTarget.style.backgroundColor = colors[ComputerChoise];
       break;
-      case "#gray-mod":
-         color = 'gray';
-         console.log(switcher)
+      case "gray-mod":
+         let light = element.currentTarget.style.filter
+
       break;
       case "black-mod":
-         const buttonBlack = document.querySelector('#black-mod');
-         color = 'black';
-         console.log(switcher)
+         element.currentTarget.style.filter = 'brightness(100%)';
+         element.currentTarget.style.backgroundColor = 'black'; 
+         
       break;
    }
-}
-
-function setColor (element){
-   element.currentTarget.style.backgroundColor = color;
 }
 
 function clearColor (){
